@@ -1,0 +1,19 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--production
+
+    // Content
+    +b.SECTION.content
+      .container
+        +e.H1.title О продукции
+
+    // About
+    include partials/components/_about.pug 
+    // Use
+    include partials/components/_use.pug 
+    // Characteristics
+    include partials/components/_characteristics.pug 
+
+
+

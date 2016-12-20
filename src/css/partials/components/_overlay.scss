@@ -1,0 +1,117 @@
+.overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    background-color: rgba(255,255,255,.8);
+    cursor: pointer;
+  }
+  &__close{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    z-index: 8;
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      width: 3px;
+      background-color: $orange;
+    }
+    &:after{
+      transform: translate(50%, -50%) rotate(45deg);
+    }
+    &:before{
+      transform: translate(50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.form{  
+  display: none;  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  width: 100%;
+  max-width: 420px;
+  background-color: $white;
+  box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.26);
+  &__close{
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 8;
+    &:before, &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      width: 1px;
+      background-color: $orange;
+    }
+    &:after{
+      transform: translate(50%, -50%) rotate(45deg);
+    }
+    &:before{
+      transform: translate(50%, -50%) rotate(-45deg);
+    }
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: $font-size-smaller;
+  }
+  &__title{
+    @include font-family('Open Sans Light', normal, normal);
+    font-size: $font-size-subtitle;
+    margin: 0 0 35px;
+    line-height: normal;
+  }
+  &__label{
+    margin-bottom: 15px;
+  }
+  &__span{
+    display: inline-block;
+    width: 150px;
+  }
+  &__input{
+    width: 200px;
+    border: 1px solid $lighter-grey;
+    padding: 5px;
+  }
+  &__select{
+    width: 200px;
+    border: 1px solid $lighter-grey;
+    padding: 5px;
+  }
+  &__btn{
+    margin: 15px 0 20px;
+  }
+  .btn{
+    padding: 10px 30px;
+  }
+}

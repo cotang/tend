@@ -1,0 +1,15 @@
+.clients{
+  padding-top: 45px;
+  padding-bottom: 50px;
+  background-color: #ddd;
+  &__title{
+    text-align: center;
+    @include font-family('Open Sans Light', normal, normal);
+    font-size: $font-size-title;
+    margin: 0 0 70px;
+  }
+  &__icon{
+    text-align: center;
+    margin-bottom: 55px;
+  }
+}

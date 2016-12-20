@@ -1,0 +1,128 @@
+.reviews{
+  background-color: $dark-cyan;
+  padding-top: 70px;
+  padding-bottom: 85px;
+  @include mq($from:xs, $until:lg){
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  &__title{
+    @include font-family('Open Sans Bold', normal, normal);
+    font-size: $font-size-title;    
+    margin: 0 0 -10px;
+    @include mq($from:xs, $until:lg){
+      font-size: $font-size-biggest;
+    }   
+  }
+  &__gallery{
+    margin: 0 -20px;
+  }
+  .slick-prev{
+    left: -80px;
+    @include mq($from:xs, $until:xl){
+      left: 20px;
+      opacity: .3;
+      &:hover, &:focus {
+        opacity: 1;
+      }
+    }
+  }
+  .slick-next{
+    right: -80px;
+    @include mq($from:xs, $until:xl){
+      right: 20px;
+      opacity: .3;
+      &:hover, &:focus {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--cyan{
+    background-color: $dark-cyan;
+    .reviews__title{
+      color: $text-color-white;
+    }
+  }
+  &--white{
+    background-color: $white;
+    .reviews__title{
+      color: $cyan;
+    }
+  }
+}
+
+.review-slide{
+  margin: 45px 20px;
+  position: relative;
+  @include font-family('Open Sans Italic', normal, normal);  
+  color: $text-grey;
+  background-color: $white;
+  box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  line-height: 1.6;
+  padding: 20px 20px 20px 70px;
+  border-radius: 5px;
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 60px;
+    transform: skewY(30deg);
+    height: 20px;
+    width: 30px;
+    background-color: $white;
+    box-shadow: 5px 5px 16px 0px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+  }
+
+  &__img{
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 50%;
+    left: -20px;
+    width: 70px;
+    height: 100px;
+    @include mq($from:xs, $until:md){
+      left: -10px;
+    } 
+    &:hover, &:focus {
+      cursor: pointer;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__author{
+    position: absolute;
+    bottom: -45px;
+    right: 0;
+    @include font-family('Open Sans Semibold', normal, normal);
+    color: $text-blue;
+    text-align: right;
+  }
+  &__modal{
+    display: none;
+    z-index: 9;
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid $grey;  
+    img{
+      width: auto;
+      height: auto;
+      max-height: calc(100vh - 40px);
+      display: block;
+    }
+  }  
+}
+
+

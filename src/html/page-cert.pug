@@ -1,0 +1,14 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--cert
+
+    // Content
+    +b.SECTION.content
+      .container
+        +e.H1.title Сертификаты
+
+    // Cert
+    include partials/components/_cert.pug 
+
+

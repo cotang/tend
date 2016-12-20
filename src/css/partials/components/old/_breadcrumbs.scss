@@ -1,0 +1,20 @@
+.breadcrumbs{
+  background-color: $breadcrumbs-grey;
+  color: $grey;
+  padding: 10px 0;
+  a{
+    color: $grey;
+    margin-right: 10px;
+    @include mq($from:xs, $until:lg){
+      margin-left: 10px;
+    }
+  }
+  a:not(:first-child){
+    margin-left: 10px;
+  }
+
+  span{
+    display: inline-block;
+    margin-left: 10px;
+  }
+}

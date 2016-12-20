@@ -1,0 +1,14 @@
+.page{
+  &--about{
+    .content__title{
+      margin: 60px 0 80px;
+      color: $text-color;
+    }
+  }
+  &--objects{
+    .content__title{
+      margin: 50px 0 0;
+    }
+  }
+}
+

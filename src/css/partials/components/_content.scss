@@ -1,0 +1,73 @@
+.content{
+  
+  &__title{
+    text-align: center;
+    font-size: $font-size-title;
+    @include font-family('Open Sans Light', normal, normal);
+    margin: 50px 0 20px;
+    color: $text-black;
+    // @include mq($from:xs, $until:lg){
+    //   font-size: $font-size-biggest;
+    // }
+  }
+  &__img{
+    width: 100%;
+    height: auto;
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__citation{
+    margin: 50px 0 40px;
+    padding-left: 60px;
+    color: $link-color;
+    font-size: $font-size-title;
+    @include font-family('Open Sans Bold', normal, normal);
+    text-transform: uppercase;
+    line-height: 1.35;
+
+    &:before{
+      content: '';
+      display: block;
+      background-color: $orange;
+      height: 1px;
+      width: 55px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text{
+    padding-left: 70px;
+    &:before{
+      content: '';
+      display: block;
+      background-color: $orange;
+      height: 1px;
+      width: 55px;
+      margin-bottom: 40px;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+      @include font-family('Open Sans', normal, normal);
+    }
+    h1{
+      // font-size: $font-size-biggest;
+    }
+    h2{
+      // font-size: $font-size-biggest;
+    }
+    h3{
+      // font-size: $font-size-bigger; 
+    }
+    h4{
+      // font-size: $font-size-big; 
+    }
+    h5, h6{
+      // font-size: $font-size-regular; 
+    }
+  }
+}

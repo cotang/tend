@@ -1,0 +1,245 @@
+.about{
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.about-item{
+  margin-top: 50px;
+  &:nth-of-type(even){
+    .row :first-of-type{
+      order: 1;
+    }
+    .about-item__info{
+      padding-left: 0;
+    }
+    .about-item__title:after{
+      background-color: $orange;
+    }
+    .about-item__text li:before{
+      background-image: url(../img/marker_orange.png);
+    }
+    .btn{
+      background-color: $orange;
+      &:hover, &:focus {
+        background-color: $light-orange;
+      }
+    }
+  }
+  &--fireproof{
+    .about-item__subtitle:before{
+      background-image: url(../img/svg/icon1.svg);
+    }
+  }
+  &--airproof{
+    .about-item__subtitle:before{
+      background-image: url(../img/svg/icon2.svg);
+    }
+  }
+  &--sustain{
+    .about-item__subtitle:before{
+      background-image: url(../img/svg/icon4.svg);
+    }
+  }
+  &--waterproof{
+    .about-item__subtitle:before{
+      background-image: url(../img/svg/icon3.svg);
+    }
+  }
+  &--ultraviolet{
+    .about-item__subtitle:before{
+      background-image: url(../img/svg/icon5.svg);
+    }
+  }
+  &--eco{
+    .about-item__subtitle:before{
+      background-image: url(../img/svg/icon6.svg);
+    }
+  }
+
+  &__img{
+    width: 100%;
+    height: 0;
+    padding-bottom: (430*100%/560);
+    position: relative;
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &__info{
+    padding-left: 70px;
+  }
+  &__title{
+    @include font-family('Open Sans Bold', normal, normal);
+    font-size: $font-size-subtitle;
+    color: $text-black;
+    margin: 0 0 25px;
+    line-height: 1.2;
+    position: relative;
+    &:after{
+      content: '';
+      display: block;
+      margin-top: 25px;
+      width: 55px;
+      height: 1px;
+      background-color: $green;
+    }
+  }
+  &__subtitle{
+    @include font-family('Open Sans Semibold', normal, normal);
+    font-size: $font-size-biggest;
+    color: $text-black;
+    margin: 0 0 25px;
+    line-height: 1.2;
+    position: relative;
+    &:before{
+      content: '';
+      width: 100px;
+      height: 90px;
+      display: block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text{
+    margin-bottom: 10px;
+    li{
+      list-style-type: none;      
+      position: relative;
+      margin-left: 10px;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: -50px;
+        display: inline-block;
+        background-image: url(../img/marker_green.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 34px;
+        height: 30px;
+      }
+    }
+  }
+  .btn{
+    background-color: $green;
+    &:hover, &:focus {
+      background-color: $light-green;
+    }
+  }
+}
+
+.about-item-gallery{
+  margin-top: 90px;
+  background-color: $gallery-bg-grey;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  &__title{
+    @include font-family('Open Sans Semibold', normal, normal);
+    color: $text-black;
+    font-size: $font-size-biggest;
+    margin: 0 0 85px;
+    &:after{
+      content: '';
+      display: block;
+      margin-top: 15px;
+      width: 55px;
+      height: 1px;
+      background-color: $orange;
+    }
+  }
+  &__gallery{
+    margin: 0 -5px;
+  }
+  &__slide{
+    margin: 0 5px;
+  }
+  &__img{    
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .slick-dots{
+    padding-left: 0;
+    margin: 45px 0 0;
+    list-style-type: none;
+    text-align: center;
+    li{
+      display: inline-block;
+      height: 8px;
+      margin: 0 10px;
+    }
+    button{
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1px solid #a5a5a5;
+      background-color: transparent;
+      color: transparent;
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+  }
+  .slick-active{
+    button{
+      background-color: #a5a5a5;
+    }
+  }
+
+
+  .slick-arrow{
+    display: block;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    outline: none; 
+    padding: 0;   
+    position: absolute;
+    right: 0;
+    top: -35px;
+    z-index: 2;
+    background-repeat: no-repeat;
+    width: 66px;
+    height: 66px;
+    border: 1px solid $orange;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/svg/about-gallery-arrow-next.svg); 
+      background-size: cover;
+      transform: scale(0.6);
+    }
+  }
+  .slick-prev{
+    right: -1px;
+    transform: translate(-100%, -100%) rotate(180deg);
+  }
+  .slick-next{
+    transform: translate(0, -100%);
+  }
+}
