@@ -1,9 +1,16 @@
 .banner{
+
   &__slide{
-    position: relative;
+    height: 350px;
+    // position: relative;
+    @include mq($from:xs, $until:lg){
+      height: 250px;
+    }
     img{
       width: 100%;
-      height: auto;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
   }
   &__text-wrapper{
@@ -19,6 +26,10 @@
     font-size: $font-size-promo-title;
     margin: -10px 0 10px;
     position: relative;
+    @include mq($from:xs, $until:md){
+      font-size: $font-size-promo-text;
+    }
+
     &:after{
       content: '';
       display: block;
@@ -33,6 +44,9 @@
   }
   &__text{
     font-size: $font-size-promo-text;
+    @include mq($from:xs, $until:md){
+      font-size: $font-size-bigger;
+    }
   }
 
   .slick-dots{    
@@ -65,8 +79,6 @@
       background-color: $orange;
     }
   }
-
-
 }
 
 .banner-icons{

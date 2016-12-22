@@ -22,17 +22,46 @@
     display: flex;
     flex-wrap: wrap;
     margin: 40px 0;
+    @include mq($from:xs, $until:md){
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
   }
 }
 .use-item{
   flex: 0 0 33.3333%;
   max-width: 33.3333%;
   text-align: center;
+  @include mq($from:xs, $until:md){
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &:nth-of-type(1){
+    .use-item__img{
+      background-image: url(../img/use_1.png);
+    }
+  }
+  &:nth-of-type(2){
+    .use-item__img{
+      background-image: url(../img/use_2.png);
+    }
+  }
+  &:nth-of-type(3){
+    .use-item__img{
+      background-image: url(../img/use_3.png);
+    }
+  }
+
   &__img{
     margin-bottom: 20px;
-    img{
-
-    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 120px;
+    height: 110px;
+    margin: 0 auto 10px;
   }
   &__text{
     font-size: $font-size-bigger;

@@ -60,4 +60,9 @@
       object-position: center center;
     }
   }
+  &__text-block{
+    @include mq($from:xs, $until:md){
+      margin-bottom: 30px;
+    }
+  }
 }

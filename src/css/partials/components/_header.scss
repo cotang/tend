@@ -1,20 +1,42 @@
 .header{
-  border-bottom: 1px solid $header-border-grey;
   &__inner{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    @include mq($from:xs, $until:md){
+      flex-direction: column;
+    }
   }
   &__logo{
     margin: 10px 0;
   }
+  &__hamburger{
+    display: none;
+    text-align: center;
+    @include mq($from:xs, $until:lg){
+      display: block;
+    }
+    @include mq($from:xs, $until:md){
+      order: 1;
+    }
+  }
   &__nav{
     margin: 10px 0;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 100%;
+      order: 2;
+    }
   }
   &__info{
     margin: 10px 0 20px;
     text-align: right;
+    @include mq($from:xs, $until:lg){
+      margin: 10px 0 10px;
+    }
+    @include mq($from:xs, $until:md){
+      text-align: center;
+    }
   }
 }
 
@@ -39,6 +61,9 @@
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
+    @include mq($from:xs, $until:md){
+      justify-content: center;
+    }
   }
   &__item{
     &:last-of-type{

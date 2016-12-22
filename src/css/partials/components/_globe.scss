@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
+  @include mq($from:xs, $until:md){
+    height: 500px;
+  }
+
   &__inner{
     height: 100%;
     display: flex;
@@ -18,5 +22,10 @@
     font-size: $font-size-title;
     color: $link-color;
     line-height: normal;
+    @include mq($from:xs, $until:md){
+      flex: 0 0 100%;
+      max-width: 100%;
+      font-size: $font-size-subtitle;
+    }
   }
 }

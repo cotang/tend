@@ -1,4 +1,8 @@
 .page{
+  border-top: 1px solid $header-border-grey;
+  &--front-page{
+    border-top: none;
+  }
   &--about{
     .content__title{
       margin: 60px 0 80px;

@@ -29,7 +29,10 @@
     @include font-family('Open Sans Bold', normal, normal);
     text-transform: uppercase;
     line-height: 1.35;
-
+    @include mq($from:xs, $until:lg){
+      padding-left: 0;
+    }
+    
     &:before{
       content: '';
       display: block;
@@ -42,6 +45,10 @@
 
   &__text{
     padding-left: 70px;
+    @include mq($from:xs, $until:lg){
+      padding-left: 0;
+    }
+
     &:before{
       content: '';
       display: block;

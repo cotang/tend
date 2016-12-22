@@ -1,5 +1,5 @@
 .cert{
-  // margin-top: 90px;
+
   &__link-all-wrapper{
     text-align: right;
     margin-bottom: 40px;
@@ -18,6 +18,9 @@
     margin: 40px 0;
     list-style-type: none;
     columns: 2;
+    @include mq($from:xs, $until:md){
+      columns: 1;
+    }
   }
   &__item{
     display: inline-block;

@@ -8,6 +8,9 @@
   &:nth-of-type(even){
     .row :first-of-type{
       order: 1;
+      @include mq($from:xs, $until:md){
+        order: initial;
+      }
     }
     .about-item__info{
       padding-left: 0;
@@ -61,6 +64,10 @@
     height: 0;
     padding-bottom: (430*100%/560);
     position: relative;
+    @include mq($from:xs, $until:md){
+      margin-bottom: 20px;
+    }
+
     img{
       position: absolute;
       top: 0;
@@ -74,6 +81,9 @@
 
   &__info{
     padding-left: 70px;
+    @include mq($from:xs, $until:lg){
+      padding-left: 0;
+    }    
   }
   &__title{
     @include font-family('Open Sans Bold', normal, normal);

@@ -7,6 +7,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include mq($from:xs, $until:md){
+      justify-content: center;
+    }
   }
   &__item{
     margin-top: 30px;

@@ -1,24 +1,20 @@
 .nav{
-  // &__wrapper{
-  //   @include mq($from:xs, $until:lg){
-  //     display: none;
-  //     text-align: center;
-  //   }    
-  // }
+  @include mq($from:xs, $until:lg){
+    display: none;
+    text-align: center;
+  }    
+
   &__list{    
     padding-left: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
-  //   @include mq($from:xs, $until:lg){
-  //     flex-wrap: wrap;
-  //   }
+    @include mq($from:xs, $until:lg){
+      flex-direction: column;
+    }
   }
   &__item{
-    margin: 0 10px;  
-    // @include mq($from:xs, $until:lg){
-    //   flex: 0 0 100%;
-    // }
+    margin: 0 10px;
   }
 
   &__link{
@@ -27,9 +23,6 @@
     font-size: $font-size-menu;
     text-transform: uppercase;
 
-  //   @include mq($from:xs, $until:lg){
-  //     padding: 7px;
-  //   }
     &:after{
       content: '';
       display: block;
@@ -44,13 +37,7 @@
       }
     }  
   }
-  &__hamburger{
-    display: none;
-    text-align: center;
-    @include mq($from:xs, $until:lg){
-      display: block;
-    }    
-  } 
+
 }
 
 .hamburger{

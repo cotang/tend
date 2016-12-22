@@ -24,6 +24,10 @@
   }
   &__offices{
     columns: 2;
+    @include mq($from:xs, $until:md){
+      columns: 1;
+      padding-left: 0;
+    }
   }
 }
 .map-text{
@@ -34,6 +38,11 @@
   border: 1px solid $orange;
   background-color: $white;
   display: flex;
+  @include mq($from:xs, $until:md){
+    display: block;
+    width: auto;
+  }
+
   &__city{
     flex: 0 0 45%;
     padding: 10px;
