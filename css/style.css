@@ -952,7 +952,8 @@ img {
   text-align: right; }
 
 .logo {
-  display: inline-block; }
+  display: inline-block;
+  max-width: 100%; }
   .logo--header {
     width: 200px;
     height: auto; }
@@ -3170,17 +3171,26 @@ img {
     font-family: "PT Serif Bold";
     src: url("../fonts/PT-Serif/PT-Serif-Bold/pt_serif_bold-webfont.svg#PT Serif Bold") format("svg"); } }
   @media (max-width: 47.99em){
-  .header__inner{
-    -ms-flex-direction: column;
-    flex-direction: column; }
+  .header__logo{
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: 50%; }
   .header__hamburger{
     -ms-flex-order: 1;
-    order: 1; }
+    order: 1;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-top: -10px; }
+  .header__nav{
+    margin: 5px 0; }
   .header__info{
-    text-align: center; }
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: 50%; }
   .language__list{
-    -ms-flex-pack: center;
-    justify-content: center; }
+    margin-bottom: 0; }
+  .telephone{
+    font-size: 12px; }
   .footer__inner{
     -ms-flex-direction: column;
     flex-direction: column;
