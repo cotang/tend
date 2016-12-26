@@ -4,12 +4,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    @include mq($from:xs, $until:md){
-      flex-direction: column;
-    }
+    // @include mq($from:xs, $until:md){
+    //   flex-direction: column;
+    // }
   }
   &__logo{
     margin: 10px 0;
+    @include mq($from:xs, $until:md){
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
   }
   &__hamburger{
     display: none;
@@ -19,6 +23,8 @@
     }
     @include mq($from:xs, $until:md){
       order: 1;
+      flex: 0 0 100%;
+      margin-top: -10px;
     }
   }
   &__nav{
@@ -26,6 +32,9 @@
     @include mq($from:xs, $until:lg){
       flex: 0 0 100%;
       order: 2;
+    }
+    @include mq($from:xs, $until:md){
+      margin: 5px 0;
     }
   }
   &__info{
@@ -35,13 +44,17 @@
       margin: 10px 0 10px;
     }
     @include mq($from:xs, $until:md){
-      text-align: center;
+      // text-align: center;
+      flex: 1 1 50%;
+      max-width: 50%;
+      // padding-left: 10px;
     }
   }
 }
 
 .logo{
   display: inline-block;
+  max-width: 100%;
   &--header{
     width: 200px;
     height: auto;
@@ -62,7 +75,8 @@
     display: flex;
     justify-content: flex-end;
     @include mq($from:xs, $until:md){
-      justify-content: center;
+      // justify-content: center;
+      margin-bottom: 0;
     }
   }
   &__item{
@@ -85,6 +99,9 @@
 .telephone{
   @include font-family('Open Sans Semibold', normal, normal);
   font-size: $font-size-tel;
+  @include mq($from:xs, $until:md){
+    font-size: $font-size-smaller;
+  }
   &__link{
     color: $text-black; 
   }
