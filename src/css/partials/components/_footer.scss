@@ -50,7 +50,7 @@
     list-style-type: none;
     @include font-family('Open Sans Semibold', normal, normal);
   }
-  &__link{
+  a{
     font-size: $font-size-menu;
     color: $text-black;
   }

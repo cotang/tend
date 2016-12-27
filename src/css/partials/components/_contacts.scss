@@ -61,14 +61,15 @@
 }
 .map-office{
   padding: 10px;
-  p{
-    line-height: normal;
+  line-height: normal;
+  p{    
     margin: 0;
   }
 }
 .office-item{
   margin: 20px 0;
   display: inline-block;
+  width: 100%;
   &__title{
     @include font-family('Open Sans Semibold', normal, normal);
     font-size: $font-size-bigger;

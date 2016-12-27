@@ -16,8 +16,11 @@
   &__item{
     margin: 0 10px;
   }
+  .menu-item{
+    margin: 0 10px;
+  }
 
-  &__link{
+  a{
     color: $text-black;
     @include font-family('Open Sans Semibold', normal, normal);
     font-size: $font-size-menu;

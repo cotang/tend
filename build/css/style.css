@@ -1009,22 +1009,25 @@ img {
 .nav__item {
   margin: 0 10px; }
 
-.nav__link {
+.nav .menu-item {
+  margin: 0 10px; }
+
+.nav a {
   color: #000000;
   font-family: "Open Sans Semibold", sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 12px;
   text-transform: uppercase; }
-  .nav__link:after {
+  .nav a:after {
     content: '';
     display: block;
     width: 50%;
     height: 1px;
     background-color: transparent; }
-  .nav__link:hover, .nav__link:focus {
+  .nav a:hover, .nav a:focus {
     color: #ed6e00; }
-    .nav__link:hover:after, .nav__link:focus:after {
+    .nav a:hover:after, .nav a:focus:after {
       background-color: #ed6e00; }
 
 .hamburger {
@@ -1084,7 +1087,7 @@ img {
   font-weight: normal;
   font-style: normal; }
 
-.nav-footer__link {
+.nav-footer a {
   font-size: 12px;
   color: #000000; }
 
@@ -1332,34 +1335,45 @@ img {
 .banner .slick-active button {
   background-color: #ed6e00; }
 
-.banner-icons__list {
-  padding-left: 0;
-  margin: 0;
-  list-style-type: none;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
-
-.banner-icons__item {
-  width: 100px;
-  height: 90px;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .banner-icons__item:nth-of-type(1) {
-    background-image: url(../img/svg/icon1.svg); }
-  .banner-icons__item:nth-of-type(2) {
-    background-image: url(../img/svg/icon2.svg); }
-  .banner-icons__item:nth-of-type(3) {
-    background-image: url(../img/svg/icon3.svg); }
-  .banner-icons__item:nth-of-type(4) {
-    background-image: url(../img/svg/icon4.svg); }
-  .banner-icons__item:nth-of-type(5) {
-    background-image: url(../img/svg/icon5.svg); }
-  .banner-icons__item:nth-of-type(6) {
-    background-image: url(../img/svg/icon6.svg); }
+.banner-icons {
+  margin-top: 30px; }
+  .banner-icons__list {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .banner-icons__item {
+    width: 120px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .banner-icons__item:nth-of-type(1) {
+      background-image: url(../img/svg/icon1.svg); }
+    .banner-icons__item:nth-of-type(2) {
+      background-image: url(../img/svg/icon2.svg); }
+    .banner-icons__item:nth-of-type(3) {
+      background-image: url(../img/svg/icon3.svg); }
+    .banner-icons__item:nth-of-type(4) {
+      background-image: url(../img/svg/icon4.svg); }
+    .banner-icons__item:nth-of-type(5) {
+      background-image: url(../img/svg/icon5.svg); }
+    .banner-icons__item:nth-of-type(6) {
+      background-image: url(../img/svg/icon6.svg); }
+      .banner-icons__item:nth-of-type(6):before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        -ms-transform: translate(20px, 20px);
+            transform: translate(20px, 20px);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../img/leave.jpeg); }
 
 .about {
   padding-top: 30px;
@@ -2173,14 +2187,15 @@ img {
         flex: 0 0 55%; }
 
 .map-office {
-  padding: 10px; }
+  padding: 10px;
+  line-height: normal; }
   .map-office p {
-    line-height: normal;
     margin: 0; }
 
 .office-item {
   margin: 20px 0;
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
   .office-item__title {
     font-family: "Open Sans Semibold", sans-serif;
     font-weight: normal;
@@ -2207,17 +2222,22 @@ img {
   width: 21px;
   height: 24px; }
 
+.cert__link-all:hover, .cert__link-all:focus {
+  color: #ed6e00;
+  text-decoration: underline; }
+
 .cert__list {
   padding-left: 0;
   margin: 40px 0;
   list-style-type: none;
-  -moz-columns: 2;
-       columns: 2; }
+  -moz-columns: 1;
+       columns: 1; }
 
 .cert__item {
   display: inline-block;
   margin-bottom: 20px;
-  padding: 0 10px; }
+  padding: 0 10px;
+  width: 100%; }
 
 .cert__link {
   display: inline-block;
