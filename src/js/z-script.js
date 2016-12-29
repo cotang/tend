@@ -31,7 +31,6 @@ jQuery(document).ready(function($){
     }
   });
 
-
   /* Object in the modal window */
   $('.object__link').click( function(e){ 
     e.preventDefault(); 
@@ -51,7 +50,6 @@ jQuery(document).ready(function($){
         });
     });
   });
- 
 
   /* Form in modal window */
   $('.call__link').click( function(e){
@@ -68,7 +66,6 @@ jQuery(document).ready(function($){
     }); 
   });
 
-
   /* галерея "клиенты" */
   $('.about-item-gallery__gallery').slick({
     infinite: true,
@@ -79,13 +76,6 @@ jQuery(document).ready(function($){
     centerMode: true,
     centerPadding: '0',
     responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1
-    //     }
-    //   },
       {
         breakpoint: 768,
         settings: {
@@ -96,16 +86,14 @@ jQuery(document).ready(function($){
     ]
   });
 
-
-
-
-  // /* плавный скролл наверх */
-  // $('.up').click(function () {
-  //   $("html, body").animate({
-  //     scrollTop: 0
-  //   }, 600);
-  //   return false;
-  // });
+  /* Thumbnail to main img - modal window */
+  $('.object-modal__slide').click( function(e){ 
+    e.preventDefault(); 
+    $(this).closest('.object-modal__img-list').find($('.object-modal__slide--active')).removeClass('object-modal__slide--active');
+    $(this).addClass('object-modal__slide--active');
+    $(this).closest('.object-modal__img-wrapper').find('.object-modal__img-main').empty();
+    $(this).find('img').clone().appendTo('.object-modal__img-main').css('opacity', 0).animate({opacity: 1}, 500);
+  });
 
 
   /* 404 - sticky footer */
@@ -115,10 +103,6 @@ jQuery(document).ready(function($){
   //   $('body').css('padding-bottom', footerHeight+'px');
   //   $('.footer').addClass('footer--stuck-to-bottom');
   // }
-
-
-
-
 
 
 });

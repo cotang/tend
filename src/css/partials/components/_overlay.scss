@@ -92,7 +92,8 @@
     line-height: normal;
   }
   &__label{
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
+    display: block;
   }
   &__span{
     display: inline-block;
@@ -100,18 +101,24 @@
   }
   &__input{
     width: 200px;
-    border: 1px solid $lighter-grey;
-    padding: 5px;
+    border: 1px solid $lighter-grey !important;
+    padding: 5px !important;
+    border-radius: none !important;
   }
   &__select{
     width: 200px;
-    border: 1px solid $lighter-grey;
-    padding: 5px;
+    border: 1px solid $lighter-grey !important;
+    padding: 5px !important;
+    border-radius: none !important;
   }
   &__btn{
     margin: 15px 0 20px;
   }
   .btn{
     padding: 10px 30px;
+    background-color: $orange;
+    &:hover, &:focus {
+      background-color: $light-orange;
+    }
   }
 }

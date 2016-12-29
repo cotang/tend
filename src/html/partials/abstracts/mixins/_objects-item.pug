@@ -17,10 +17,10 @@ mixin objectsItem(title, img, alt, city)
             +e.img-main
               img(src="img/objects/"+img+".jpg", alt= alt, title= alt)
             +e.img-list
-              +e.slide
+              +e.slide--active
                 img(src="img/objects/"+img+".jpg", alt= alt, title= alt)
               +e.slide
-                img(src="img/objects/"+img+".jpg", alt= alt, title= alt)
+                img(src="img/objects/"+alt+".jpg", alt= alt, title= alt)
           +e.text-wrapper
             +e.H3.title #{title}
             +e.table
@@ -33,6 +33,6 @@ mixin objectsItem(title, img, alt, city)
             +e.description-wrapper Описание
               +e.description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             +e.nav
-              +b.navigation
+              +b.object-navigation
                 +e.link--prev(href="#") Предыдущий объект
                 +e.link--next(href="#") Следующий объект
